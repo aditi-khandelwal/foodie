@@ -45,17 +45,30 @@
       <ion-item>
        
      <b style="color:#A9AAAE">Bill Details-</b>
-    <!-- <ion-card-content>
+     <br>
+     <ion-card-content>
       <ion-list *ngFor="let i of items ">
         {{i.dishs}}
-        <div float-right>${{i.price}}</div>
+        <div align="right">${{i.price}}</div>
       </ion-list>
-    </ion-card-content> -->
+     </ion-card-content>
+    <ion-card-content>      
+      Item Total
+      <div float-right >${{ Total() }}</div>
+    </ion-card-content>
+    <ion-card-content>
+        Discount Applied
+        <div float-right>$10</div>
+       </ion-card-content>
+    <ion-card-content style="color:grey">
+        Paid Via Visa Card
+        <div float-right>$54</div>
+  </ion-card-content>
     
 
 
 
-    <ion-card-content> Nachos Primera Bowl x 1
+    <!-- <ion-card-content> Nachos Primera Bowl x 1
    <div float-right>$10</div>
   </ion-card-content>
    <ion-card-content>
@@ -69,8 +82,8 @@
        <ion-card-content>
           Indian Thali x 1
           <div float-right>$10</div>
-         </ion-card-content>
-         <ion-card-content>
+         </ion-card-content> -->
+         <!-- <ion-card-content>
             Item Total
             <div float-right>$10</div>
            </ion-card-content>
@@ -81,11 +94,11 @@
              <ion-card-content style="color:grey">
                 Paid Via Visa Card
                 <div float-right>$54</div>
-               </ion-card-content>
+               </ion-card-content> -->
             
           </ion-item>
     </ion-card>
 </ion-content>
 <ion-footer>
-    <button ion-button full style="background-color:#FF6F00" [navPush]="pushPage">Reorder</button>
+    <button ion-button full style="background-color:#FF6F00" (click)="demoOpen()">Reorder</button>
 </ion-footer>
